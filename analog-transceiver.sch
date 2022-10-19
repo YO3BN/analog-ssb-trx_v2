@@ -581,8 +581,6 @@ Connection ~ 6100 1850
 Wire Wire Line
 	6100 1850 6100 1800
 Wire Wire Line
-	4350 1850 5250 1850
-Wire Wire Line
 	6650 1300 7100 1300
 Connection ~ 7100 1300
 Wire Wire Line
@@ -2661,12 +2659,6 @@ F 3 "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DAT
 $EndComp
 Wire Wire Line
 	1900 950  2250 950 
-Wire Wire Line
-	2750 1150 2750 1750
-Wire Wire Line
-	2750 1750 4350 1750
-Wire Wire Line
-	4350 1750 4350 1850
 $Comp
 L analog-transceiver-rescue:ADT1-1WT-Transformer TR6
 U 1 1 5F1056EF
@@ -3578,4 +3570,116 @@ Wire Wire Line
 Connection ~ 2750 9750
 Wire Wire Line
 	2750 9750 2450 9750
+$Comp
+L Device:R R?
+U 1 1 6357BA72
+P 3700 2700
+F 0 "R?" H 3770 2746 50  0000 L CNN
+F 1 "50" H 3770 2655 50  0000 L CNN
+F 2 "" V 3630 2700 50  0001 C CNN
+F 3 "~" H 3700 2700 50  0001 C CNN
+	1    3700 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6357D848
+P 4350 2700
+F 0 "R?" H 4420 2746 50  0000 L CNN
+F 1 "50" H 4420 2655 50  0000 L CNN
+F 2 "" V 4280 2700 50  0001 C CNN
+F 3 "~" H 4350 2700 50  0001 C CNN
+	1    4350 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L?
+U 1 1 6357F194
+P 3900 3100
+F 0 "L?" H 4100 3050 50  0000 R CNN
+F 1 "82n" H 4100 3150 50  0000 R CNN
+F 2 "" H 3900 3100 50  0001 C CNN
+F 3 "~" H 3900 3100 50  0001 C CNN
+	1    3900 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:L L?
+U 1 1 63581311
+P 3850 2400
+F 0 "L?" V 4040 2400 50  0000 C CNN
+F 1 "8.2u" V 3949 2400 50  0000 C CNN
+F 2 "" H 3850 2400 50  0001 C CNN
+F 3 "~" H 3850 2400 50  0001 C CNN
+	1    3850 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 63583747
+P 4200 3100
+F 0 "C?" H 4315 3146 50  0000 L CNN
+F 1 "2.7n" H 4315 3055 50  0000 L CNN
+F 2 "" H 4238 2950 50  0001 C CNN
+F 3 "~" H 4200 3100 50  0001 C CNN
+	1    4200 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 63585ADB
+P 4200 2400
+F 0 "C?" V 3948 2400 50  0000 C CNN
+F 1 "27p" V 4039 2400 50  0000 C CNN
+F 2 "" H 4238 2250 50  0001 C CNN
+F 3 "~" H 4200 2400 50  0001 C CNN
+	1    4200 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 635882C3
+P 4050 3250
+F 0 "#PWR?" H 4050 3000 50  0001 C CNN
+F 1 "GND" H 4055 3077 50  0000 C CNN
+F 2 "" H 4050 3250 50  0001 C CNN
+F 3 "" H 4050 3250 50  0001 C CNN
+	1    4050 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 2950 4050 2950
+Wire Wire Line
+	4200 3250 4050 3250
+Connection ~ 4050 3250
+Wire Wire Line
+	4050 3250 3900 3250
+Wire Wire Line
+	3700 2850 4050 2850
+Wire Wire Line
+	3700 2400 3700 2550
+Wire Wire Line
+	4000 2400 4050 2400
+Wire Wire Line
+	4350 2400 4350 2550
+Wire Wire Line
+	4050 2850 4050 2950
+Connection ~ 4050 2850
+Wire Wire Line
+	4050 2850 4350 2850
+Connection ~ 4050 2950
+Wire Wire Line
+	4050 2950 4200 2950
+Text Notes 3800 3750 0    50   ~ 0
+Bridget Tee\nDiplexer\n50Ohm - 10.7MHz
+Wire Wire Line
+	4350 2400 5250 2400
+Wire Wire Line
+	5250 2400 5250 1850
+Connection ~ 4350 2400
+Wire Wire Line
+	3700 2400 2750 2400
+Wire Wire Line
+	2750 1150 2750 2400
+Connection ~ 3700 2400
 $EndSCHEMATC
